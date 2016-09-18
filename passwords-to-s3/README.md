@@ -11,8 +11,10 @@ This script exports all TPM passwords to an AWS S3 bucket.  Python `v2.7.11` was
 3. Rename `tpmPasswordsToS3Config.sample` to `tpmPasswordsToS3Config.py`
 4. Setup AWS Items:
     - Create S3 bucket
-    - S3 bucket policy
-    - IAM credentials and access keys
+    - Enable versioning on bucket
+    - Setup lifecycle rule(s) on bucket
+    - Create S3 bucket policy
+    - Create IAM credentials and access keys
 5. Setup a read-only user for all projects in TPM
     - encode `user:pass` to base64 for next step
 6. Configure all settings inside `tpmPasswordsToS3Config.py`
